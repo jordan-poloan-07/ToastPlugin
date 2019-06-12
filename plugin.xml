@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-toastyplugin" version="0.0.1">
+    <name>ToastPlugin</name>
+
+    <description>Toast Plugin</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,toast,message,alert</keywords>
+    <repo>https://github.com/jordan-poloan-07/ToastPlugin.git</repo>
+    <issue>https://github.com/jordan-poloan-07/ToastPlugin/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/toastplugin.js" name="toastPlugin">
+        <clobbers target="window.plugins.toastPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ToastPlugin">
+                <param name="android-package" value="com.joloan.cordova.plugin.ToastPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/ToastPlugin.java" target-dir="src/com/joloan/cordova/plugin" />
+    </platform>
+</plugin>
