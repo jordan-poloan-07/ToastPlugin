@@ -10,7 +10,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class ToastyPlugin extends CordovaPlugin {
+public class ToastPlugin extends CordovaPlugin {
 
   private static final String DURATION_LONG = "long";
 
@@ -42,5 +42,5 @@ public class ToastyPlugin extends CordovaPlugin {
       callbackContext.sendPluginResult(pluginResult);
       return true;
   }
-  
+
 }
